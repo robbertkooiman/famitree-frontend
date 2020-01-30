@@ -1,0 +1,30 @@
+<h1 mat-dialog-title>New person</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>First name</mat-label>
+    <input matInput [(ngModel)]="person.firstName">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Last name</mat-label>
+    <input matInput [(ngModel)]="person.lastName">
+  </mat-form-field>
+  <mat-radio-group aria-label="Status" [(ngModel)]="person.status">
+    <mat-radio-button value="ALIVE">Alive</mat-radio-button>
+    <mat-radio-button value="DECEASED">Deceased</mat-radio-button>
+    <mat-radio-button value="UNKNOWN">Unknown</mat-radio-button>
+  </mat-radio-group>
+  <mat-form-field>
+    <input matInput [matDatepicker]="birth" [(ngModel)]="person.birthDate" placeholder="Birthdate">
+    <mat-datepicker-toggle matSuffix [for]="birth"></mat-datepicker-toggle>
+    <mat-datepicker #birth></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [matDatepicker]="death" [(ngModel)]="person.deathDate" placeholder="Date of death">
+    <mat-datepicker-toggle matSuffix [for]="death"></mat-datepicker-toggle>
+    <mat-datepicker #death></mat-datepicker>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="dialogRef.close(null)">Cancel</button>
+  <button mat-button (click)="dialogRef.close(person)" color="accent" cdkFocusInitial>Add</button>
+</div>

@@ -3,6 +3,8 @@ import { ApiService } from '../api.service';
 import { Status } from '../status';
 import { firestore } from 'firebase';
 import { Person } from '../person';
+import { MatDialog } from '@angular/material/dialog';
+import { AddPersonDialogComponent } from '../add-person-dialog/add-person-dialog.component';
 
 @Component({
   selector: 'app-add-person',
@@ -11,18 +13,17 @@ import { Person } from '../person';
 })
 export class AddPersonComponent implements OnInit {
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService, private dialog: MatDialog) { }
 
   ngOnInit() {
   }
 
   add() {
-    this.api.createPerson(new Person({
-      firstName: 'Mister',
-      lastName: 'Test',
-      birthDate: firestore.Timestamp.now(),
-      status: Status.ALIVE
-    }));
+    this.dialog.open(AddPersonDialogComponent).afterClosed().subscribe(person => {
+      if (person) {
+        this.api.createPerson(person);
+      }
+    });
   }
 
 }

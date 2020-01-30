@@ -1,7 +1,7 @@
 <mat-card>
-    <mat-card-title>{{ person.firstName }} {{ person.lastName }}</mat-card-title>
+    <mat-card-title>{{ person?.firstName }} {{ person?.lastName }}</mat-card-title>
   <mat-card-content>
-    <p>{{ person.birthDate.toDate() | date:'dd-MM-yyyy'}}</p>
+    <p>{{ person.birthDate?.toDate() | date:'dd-MM-yyyy'}}</p>
     <p>{{ person.deathDate?.toDate() | date:'dd-MM-yyyy'}}</p>
     <p>{{ formatStatus(person.status) }}</p>
   </mat-card-content>
