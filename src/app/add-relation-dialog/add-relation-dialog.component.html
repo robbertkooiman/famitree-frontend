@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Add relation</h1>
+<div mat-dialog-content>
+  {{data.person.firstName}} is a
+  <mat-form-field>
+    <mat-label>relation</mat-label>
+    <mat-select [(ngModel)]="selectedRelation">
+      <mat-option *ngFor="let relationship of relationships" [value]="relationship">
+        {{relationship}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  of
+  <mat-form-field>
+    <mat-label>person</mat-label>
+    <mat-select [(ngModel)]="selectedPerson">
+      <mat-option *ngFor="let person of persons" [value]="person.id">
+        {{person.firstName + ' ' + person.lastName}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="dialogRef.close(null)">Cancel</button>
+  <button mat-button (click)="add()" color="accent" cdkFocusInitial>Add</button>
+</div>

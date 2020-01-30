@@ -17,6 +17,7 @@ import { PersonComponent } from './person/person.component';
 import { AddPersonComponent } from './add-person/add-person.component';
 import { ConfirmDeleteDialogComponent } from './confirm-delete-dialog/confirm-delete-dialog.component';
 import { AddPersonDialogComponent } from './add-person-dialog/add-person-dialog.component';
+import { AddRelationDialogComponent } from './add-relation-dialog/add-relation-dialog.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AddPersonDialogComponent } from './add-person-dialog/add-person-dialog.
     PersonComponent,
     AddPersonComponent,
     ConfirmDeleteDialogComponent,
-    AddPersonDialogComponent
+    AddPersonDialogComponent,
+    AddRelationDialogComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),
@@ -42,7 +44,8 @@ import { AddPersonDialogComponent } from './add-person-dialog/add-person-dialog.
   bootstrap: [AppComponent],
   entryComponents: [
     ConfirmDeleteDialogComponent,
-    AddPersonDialogComponent
+    AddPersonDialogComponent,
+    AddRelationDialogComponent,
   ]
 })
 export class AppModule { }

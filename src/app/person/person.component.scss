@@ -3,12 +3,19 @@
 
   .mat-card {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
     .mat-card-actions {
-      opacity: 0;
       text-align: right;
+    }
+    .mat-card-actions, li .mat-icon-button {
+      opacity: 0;
       transition: all 0.2s ease;
     }
-    &:hover .mat-card-actions {
+    .mat-card-content {
+      flex: 1;
+    }
+    &:hover .mat-card-actions, &:hover li .mat-icon-button {
       opacity: 1;
     }
   }

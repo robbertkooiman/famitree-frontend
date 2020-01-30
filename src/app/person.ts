@@ -1,6 +1,7 @@
 import { Status } from './status';
 import { firestore } from 'firebase/app';
 import Timestamp = firestore.Timestamp;
+import { Relation } from './relation';
 
 export class Person {
     id?: string
@@ -9,6 +10,7 @@ export class Person {
     birthDate: Timestamp
     deathDate: Timestamp
     status: Status
+    relations?: Relation[]
     constructor(person) {
         return {
             firstName: person.firstName || '',
