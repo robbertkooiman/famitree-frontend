@@ -1,0 +1,7 @@
+{
+    "/api":
+    {
+        "target": "https://famitree-app.web.app/api",
+        "secure": false
+    } 
+}

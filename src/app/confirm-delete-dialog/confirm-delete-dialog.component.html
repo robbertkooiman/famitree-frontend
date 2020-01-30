@@ -1,0 +1,6 @@
+<h1 mat-dialog-title>Confirm</h1>
+<p mat-dialog-text>Are you sure you want to remove {{data.name}} permanently?</p>
+<div mat-dialog-actions>
+  <button mat-button (click)="dialogRef.close(false)">Cancel</button>
+  <button mat-button (click)="dialogRef.close(true)" color="warn" cdkFocusInitial>Remove</button>
+</div>
