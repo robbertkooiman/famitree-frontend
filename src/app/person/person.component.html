@@ -2,16 +2,15 @@
   <mat-card-title>{{ person?.firstName }} {{ person?.lastName }}</mat-card-title>
   <mat-card-content>
     <p>{{ person.birthDate?.toDate() | date:'dd-MM-yyyy'}}</p>
-    <p>{{ person.deathDate?.toDate() | date:'dd-MM-yyyy'}}</p>
-    <p>{{ formatStatus(person.status) }}</p>
-    <ul>
+    <p>{{ person.status === 'DECEASED' ? '†' : '' }}{{ person.deathDate?.toDate() | date:'dd-MM-yyyy'}}</p>
+    <ul *ngIf="!plain">
       <li *ngFor="let relation of person.relations">{{formatRelation(relation)}}
         <button mat-icon-button color="warn" (click)="deleteRelation(relation.id)">
           <mat-icon>delete</mat-icon>
         </button></li>
     </ul>
   </mat-card-content>
-  <mat-card-actions>
+  <mat-card-actions *ngIf="!plain">
     <button mat-button (click)="addRelation()">
       Add relation
     </button>

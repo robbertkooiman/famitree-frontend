@@ -11,7 +11,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatSelectModule } from '@angular/material/select';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
-import { MatNativeDateModule } from '@angular/material';
+import { MatNativeDateModule, MatMenuModule } from '@angular/material';
 
 
 const IMPORTS = [
@@ -26,6 +26,7 @@ const IMPORTS = [
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
+    MatMenuModule
 ];
 
 @NgModule({

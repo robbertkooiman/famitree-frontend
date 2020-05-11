@@ -1,0 +1,33 @@
+<div class="search" *ngIf="!id">
+  <h1>Search for a starting person</h1>
+  <p>Search for a person as a starting point:</p>
+  <mat-form-field>
+    <input matInput (input)="search($event.target.value)" placeholder="Search by first name"></mat-form-field>
+  <div class="persons">
+
+    <app-person *ngFor="let person of persons" [person]="person" [plain]="true"
+      [routerLink]="'/family-tree/'+person.id"></app-person>
+  </div>
+  <h1>Can't find yourself?</h1>
+  <p>If you can't find yourself, create your person information here:</p>
+  <app-add-person></app-add-person>
+</div>
+<div class="tree" *ngIf="id">
+  <h1>{{centerPerson.firstName}}'s family tree</h1>
+  <div class="parents">
+    <app-person *ngFor="let person of parents" [person]="person" [plain]="true"
+      [routerLink]="'/family-tree/' + person.id"></app-person>
+    <!-- <app-add-person buttonText="Add parent"></app-add-person> -->
+  </div>
+  <div class="siblings">
+    <app-person *ngIf="centerPerson" [person]="centerPerson" [plain]="true" class="centerPerson"></app-person>
+    <app-person *ngFor="let person of siblings" [person]="person" [plain]="true"
+      [routerLink]="'/family-tree/' + person.id"></app-person>
+    <!-- <app-add-person buttonText="Add sibling"></app-add-person> -->
+  </div>
+  <div class="children">
+    <app-person *ngFor="let person of children" [person]="person" [plain]="true"
+      [routerLink]="'/family-tree/' + person.id"></app-person>
+    <!-- <app-add-person buttonText="Add child"></app-add-person> -->
+  </div>
+</div>

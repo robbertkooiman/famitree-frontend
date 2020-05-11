@@ -18,6 +18,9 @@ import { AddPersonComponent } from './add-person/add-person.component';
 import { ConfirmDeleteDialogComponent } from './confirm-delete-dialog/confirm-delete-dialog.component';
 import { AddPersonDialogComponent } from './add-person-dialog/add-person-dialog.component';
 import { AddRelationDialogComponent } from './add-relation-dialog/add-relation-dialog.component';
+import { HomeComponent } from './home/home.component';
+import { FamilyTreeComponent } from './family-tree/family-tree.component';
+import { FamilyTreePersonComponent } from './family-tree-person/family-tree-person.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { AddRelationDialogComponent } from './add-relation-dialog/add-relation-d
     AddPersonComponent,
     ConfirmDeleteDialogComponent,
     AddPersonDialogComponent,
-    AddRelationDialogComponent
+    AddRelationDialogComponent,
+    HomeComponent,
+    FamilyTreeComponent,
+    FamilyTreePersonComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

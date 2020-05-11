@@ -16,6 +16,7 @@ import { AddRelationDialogComponent } from '../add-relation-dialog/add-relation-
 export class PersonComponent implements OnInit {
 
   @Input('person') person: Person;
+  @Input('plain') plain: boolean = false;
 
   constructor(private api: ApiService, private dialog: MatDialog) { }
 

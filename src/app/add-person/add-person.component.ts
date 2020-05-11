@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ApiService } from '../api.service';
 import { Status } from '../status';
 import { firestore } from 'firebase';
@@ -12,6 +12,8 @@ import { AddPersonDialogComponent } from '../add-person-dialog/add-person-dialog
   styleUrls: ['./add-person.component.scss']
 })
 export class AddPersonComponent implements OnInit {
+
+  @Input() buttonText = "Add person";
 
   constructor(private api: ApiService, private dialog: MatDialog) { }
 

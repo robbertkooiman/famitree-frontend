@@ -1,0 +1,21 @@
+.persons {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.parents,
+.children, .siblings {
+  min-height: 110px;
+  display: flex;
+  justify-content: center;
+
+  >* {
+    flex: 0 1 300px;
+    margin: 5px;
+  }
+}
+
+.centerPerson {
+  border: 2px solid blue;
+}
