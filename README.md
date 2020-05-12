@@ -1,27 +1,13 @@
 # Famitree
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
+This project uses Angular and Angular Material.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm start` to start a development server. Your browser will open to localhost:4200, which is where the project is run.
 
-## Code scaffolding
+## Things to look for
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Inside of the /src folder, the code structure for this project can be seen. Most surrounding files are generated.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The .ts files are the TypeScript files, which is where the component logic is made. These are the files that are commented. The HTML-files might be interesting to take a look at too, but as they don't house any logic they have not been commented.

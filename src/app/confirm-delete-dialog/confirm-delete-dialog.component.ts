@@ -8,6 +8,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class ConfirmDeleteDialogComponent {
   constructor(
+    // The confirm delete dialog is pretty self-explanatory. It receives data of what it is going to delete.
     public dialogRef: MatDialogRef<ConfirmDeleteDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data
   ) { }

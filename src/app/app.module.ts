@@ -20,7 +20,8 @@ import { AddPersonDialogComponent } from './add-person-dialog/add-person-dialog.
 import { AddRelationDialogComponent } from './add-relation-dialog/add-relation-dialog.component';
 import { HomeComponent } from './home/home.component';
 import { FamilyTreeComponent } from './family-tree/family-tree.component';
-import { FamilyTreePersonComponent } from './family-tree-person/family-tree-person.component';
+
+// The app module binds all of the components together into a module, making it ready to ship
 
 @NgModule({
   declarations: [
@@ -34,7 +35,6 @@ import { FamilyTreePersonComponent } from './family-tree-person/family-tree-pers
     AddRelationDialogComponent,
     HomeComponent,
     FamilyTreeComponent,
-    FamilyTreePersonComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebase),

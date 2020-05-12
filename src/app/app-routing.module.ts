@@ -4,7 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { PersonsComponent } from './persons/persons.component';
 import { FamilyTreeComponent } from './family-tree/family-tree.component';
 
-
+// The routing module describes all of the routes the app has, which are the subpaths you can enter into the URL
 const routes: Routes = [
   {
     path: '',

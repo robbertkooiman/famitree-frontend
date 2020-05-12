@@ -1,5 +1,6 @@
 import { RelationType } from './relation-type.enum';
 
+// The relation class describes what data to expect
 export class Relation {
     id?: string;
     type: RelationType;

@@ -1,4 +1,4 @@
-<h1 mat-dialog-title>New person</h1>
+<h1 mat-dialog-title>{{data?.person ? 'Edit' : 'New'}} person</h1>
 <div mat-dialog-content>
   <mat-form-field>
     <mat-label>First name</mat-label>
@@ -26,5 +26,5 @@
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="dialogRef.close(null)">Cancel</button>
-  <button mat-button (click)="dialogRef.close(person)" color="accent" cdkFocusInitial>Add</button>
+  <button mat-button (click)="dialogRef.close(person)" color="accent" cdkFocusInitial>{{data?.person ? 'Save' : 'Add'}}</button>
 </div>

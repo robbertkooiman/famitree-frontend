@@ -3,6 +3,7 @@ import { firestore } from 'firebase/app';
 import Timestamp = firestore.Timestamp;
 import { Relation } from './relation';
 
+// The person class describing what data to expect
 export class Person {
     id?: string
     firstName: string

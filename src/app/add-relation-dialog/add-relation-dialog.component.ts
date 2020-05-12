@@ -22,12 +22,14 @@ export class AddRelationDialogComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    // Get persons from API to show options when selecting
     this.api.getPersons().subscribe(persons => {
       this.persons = persons;
     })
   }
 
   add() {
+    // Fill in data for how the relation should be defined, send to API
     let relation: Relation = null;
     if (this.selectedRelation && this.selectedPerson) {
       switch (this.selectedRelation) {
@@ -61,6 +63,7 @@ export class AddRelationDialogComponent implements OnInit {
           break;
       }
     }
+    // Close the dialog, it's done
     this.dialogRef.close(relation);
   }
 }

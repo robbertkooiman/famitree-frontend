@@ -43,6 +43,9 @@ export class ApiService {
       });
     }));
   }
+  public editPerson(person) {
+    return this.db.collection('persons').doc(person.id).set({ ...person }, { merge: true });
+  }
   public createPerson(person) {
     return this.db.collection('persons').add(person);
   }
@@ -69,7 +72,8 @@ export class ApiService {
           }
         });
         persons.forEach(person => {
-          if ((person.id === relation.person1.id || person.id === relation.person2.id)) {
+          if ((person.id === relation.person1.id || person.id === relation.person2.id)
+            && !relation.person1._key && !relation.person2._key) {
             !person.relations ? person.relations = [relation] : !person.relations.find(find => find.id === relation.id) ? person.relations.push(relation) : null;
           }
         });

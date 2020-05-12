@@ -13,6 +13,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { MatNativeDateModule, MatMenuModule } from '@angular/material';
 
+// This is a module with components from a third party: the angular material library
 
 const IMPORTS = [
     MatToolbarModule,
